@@ -29,6 +29,16 @@ namespace QuickFix
             get { return isStopped_; }
         }
 
+        public int DisconnectedCount
+        {
+            get { lock (sync_) { return disconnected_.Count; } }
+        }
+
+        public int ConnectedCount
+        {
+            get { lock (sync_) { return connected_.Count; } }
+        }
+
         #endregion
 
         public AbstractInitiator(IApplication app, IMessageStoreFactory storeFactory, SessionSettings settings)
