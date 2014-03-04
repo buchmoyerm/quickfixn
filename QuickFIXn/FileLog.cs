@@ -16,6 +16,8 @@ namespace QuickFix
 
         private bool _disposed = false;
 
+        private bool _throwOnDisposeCheck = false;
+
         public FileLog(string fileLogPath)
         {
             Init(fileLogPath, "GLOBAL");
@@ -62,17 +64,22 @@ namespace QuickFix
             return prefix.ToString();
         }
 
-        private void DisposedCheck()
+        private bool DisposedCheck()
         {
             if (_disposed)
-                throw new System.ObjectDisposedException(this.GetType().Name);
+            {
+                if (_throwOnDisposeCheck)
+                    throw new System.ObjectDisposedException(this.GetType().Name);
+                return true;
+            }
+            return false;
         }
 
         #region Log Members
 
         public void Clear()
         {
-            DisposedCheck();
+            if (DisposedCheck()) return;
 
             lock (sync_)
             {
@@ -89,7 +96,7 @@ namespace QuickFix
 
         public void OnIncoming(string msg)
         {
-            DisposedCheck();
+            if (DisposedCheck()) return;
 
             lock (sync_)
             {
@@ -99,7 +106,7 @@ namespace QuickFix
 
         public void OnOutgoing(string msg)
         {
-            DisposedCheck();
+            if (DisposedCheck()) return;
 
             lock (sync_)
             {
@@ -109,7 +116,7 @@ namespace QuickFix
 
         public void OnEvent(string s)
         {
-            DisposedCheck();
+            if (DisposedCheck()) return;
 
             lock (sync_)
             {
