@@ -20,6 +20,7 @@ Contributors
 - Grant Birchmeier
 - Kirk Kozel
 - Chris Busbey
+- Richard Young
 - Harvender Vasdev
 - Chris Barker
 - Wesley McClure
@@ -39,4 +40,9 @@ Contributors
 - Julien Roncaglia
 - Abderraouf Elgasser
 - Ryan Rastedt
+- Daniel Svensson
+- Ruann Viljoen
+- Andrey Kamyshanov
+- Jac Steyn
+
 
