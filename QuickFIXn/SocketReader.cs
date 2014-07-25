@@ -1,6 +1,6 @@
-﻿using System.Net.Sockets;
+﻿using System;
 using System.IO;
-using System;
+using System.Net.Sockets;
 
 namespace QuickFix
 {

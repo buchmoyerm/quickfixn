@@ -1,6 +1,6 @@
+using QuickFix.Fields;
 using System;
 using System.Collections.Generic;
-using QuickFix.Fields;
 
 namespace QuickFix
 {

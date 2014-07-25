@@ -1,7 +1,7 @@
-﻿using System;
+﻿using QuickFix.Util;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using QuickFix.Util;
 
 namespace QuickFix
 {

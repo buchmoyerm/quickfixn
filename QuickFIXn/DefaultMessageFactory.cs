@@ -1,9 +1,5 @@
-﻿using System;
+﻿using QuickFix.Fields;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using QuickFix.Fields;
 
 namespace QuickFix
 {

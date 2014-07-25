@@ -1,9 +1,9 @@
-﻿using System;
+﻿using QuickFix.Fields;
+using QuickFix.Fields.Converters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using QuickFix.Fields;
-using QuickFix.Fields.Converters;
 
 namespace QuickFix
 {
