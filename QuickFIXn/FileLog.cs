@@ -58,7 +58,7 @@ namespace QuickFix
             if (SessionID.IsSet(sessionID.TargetLocationID))
                 prefix.Append('_').Append(sessionID.TargetLocationID);
 
-            if(sessionID.SessionQualifier.Length!=0)
+            if (SessionID.IsSet(sessionID.SessionQualifier))
                 prefix.Append('-').Append(sessionID.SessionQualifier);
 
             return prefix.ToString();
