@@ -79,7 +79,8 @@ namespace QuickFix
             {
                 int bytesRead = ReadSome(readBuffer_, 1000);
                 if (bytesRead > 0)
-                    parser_.AddToStream(System.Text.Encoding.UTF8.GetString(readBuffer_, 0, bytesRead));
+                    parser_.AddToStream(ref readBuffer_, bytesRead);
+                    //parser_.AddToStream(System.Text.Encoding.UTF8.GetString(readBuffer_, 0, bytesRead));
                 else if (null != session_)
                 {
                     session_.Next();
